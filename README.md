@@ -12,3 +12,6 @@ Design data models, build data warehouses and data lakes, automate data pipeline
 
 ### Project
 * [Project 4 - Data Pipelines with Airflow]
+
+
+[Program Syllabus](./Data%2BEngineering%2BNanodegree%2BProgram%2BSyllabus.pdf), more information about this program can be found by visiting [Udacity Data Engineering ND](https://www.udacity.com/course/data-engineer-nanodegree--nd027).
