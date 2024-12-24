@@ -1,5 +1,5 @@
 ## Data Engineering with AWS
-___
+
 ### Learning Objectives  
 
 * Develop proficiency in Spark, Airflow, and Amazon Web Services tools.
