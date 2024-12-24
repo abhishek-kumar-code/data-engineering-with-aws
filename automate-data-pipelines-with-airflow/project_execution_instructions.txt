@@ -1,0 +1,9 @@
+Order of Execution: 
+
+1. Copy S3 data from Udacity Bucket to Cloudshell
+2. Copy data from home cloudshell directory to akumar-dend (my S3 bucket)
+3. Configure AWS Redshift Serverless (as per Lesson#3.12)
+4. Add Airflow Connections to AWS Redshift (as per Lesson#3.13 - see images folder for connection)
+5. Add Airflow User Setup (as per Lesson#3.5 - - see images folder for connection)
+6. Run final_project_create_table DAG (create_redshift_tables.py) to trigger create tables in Redshift
+7. Run final_project DAG (final_project.py) to trigger the data pipeline
