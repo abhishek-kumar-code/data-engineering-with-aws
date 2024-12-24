@@ -1,16 +1,16 @@
-# Udacity Data Engineering with AWS Nanodegree
+# Data Engineering with AWS
 
-Design data models, build data warehouses and data lakes, automate data pipelines, and manage massive datasets. 
+Learning Objectives  
 
-* Create user-friendly Relational and NoSQL data models
-* Create scalable and efficient data warehouses
-* Work efficiently with massive datasets
-* Build and interact with a cloud-based data lake
-* Automate and monitor data pipelines
-* Develop proficiency in Spark, Airflow, and AWS tools
+* Develop proficiency in Spark, Airflow, and Amazon Web Services tools.
+* Automate and monitor production data pipelines.
+* Build and interact with a cloud-based data lake.
+* Work efficiently with massive datasets.
+* Create scalable and efficient data warehouses in Cloud.
+* Create user-friendly relational and NoSQL data models.
 
 
-### Project
+### Project: Data Pipelines with Airflow
 * [Project 4 - Data Pipelines with Airflow]
 
 
