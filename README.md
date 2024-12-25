@@ -28,7 +28,7 @@ The objective of this project is to design and implement high grade automated an
 - Ensure that any discrepancies in the datasets are detected and addressed before analyses are run on the DW.
 
 **4. Data Integration**
-- The source data, residing in Amazon S3, consists of JSON logs detailing user activity and JSON metadata about songs.
+- The source data, residing in S3, consists of JSON logs detailing user activity and JSON metadata about songs.
 - Process and load the data into Sparkify's DW on Redshift, ensuring compatibility and efficient data flow.
 
 ![Project Logo](automate-data-pipelines-with-airflow/images/final_project_create_table_DAG_Graph.PNG)
