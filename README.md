@@ -18,5 +18,5 @@ Objective:
 ![Project Logo](automate-data-pipelines-with-airflow/images/final_project_create_table_DAG_Graph.PNG)
 
 > [!NOTE]
-> Program curricula attached below.
+> School of Data Science, Udacity. Program curricula attached below.
 [Program Syllabus](./Data%2BEngineering%2BNanodegree%2BProgram%2BSyllabus.pdf), more information about this program can be found by visiting [Udacity Data Engineering ND](https://www.udacity.com/course/data-engineer-nanodegree--nd027).
