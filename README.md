@@ -1,13 +1,13 @@
 ## Data Engineering with AWS
 
-### Program Learning Outcomes  
+### <ins>Program Learning Outcomes</ins>  
 
 * **Develop proficiency in Spark, Airflow, and Amazon Web Services tools.**
 * **Automate and monitor production data pipelines.**
 * **Build and interact with a cloud-based data lake.**
 * **Work efficiently with massive datasets.**
 * **Create scalable and efficient data warehouses in Cloud.**
-* Create user-friendly relational and NoSQL data models.
+* **Create user-friendly relational and NoSQL data models.**
 ___
 
 ### Project: Data Pipelines with Airflow
