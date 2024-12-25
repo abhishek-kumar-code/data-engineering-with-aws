@@ -10,7 +10,7 @@
 * **Create user-friendly relational and NoSQL data models.**
 ___
 
-### Project: Data Pipelines with Airflow(automate-data-pipelines-with-airflow)
+### Project: [Data Pipelines with Airflow]([automate-data-pipelines-with-airflow](https://github.com/abhishek-kumar-code/data-engineering-with-aws/tree/master/automate-data-pipelines-with-airflow))
 * [Project 4 - Data Pipelines with Airflow]
 
 Objective: 
