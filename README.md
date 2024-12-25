@@ -10,7 +10,7 @@
 * **Create user-friendly relational and NoSQL data models.**
 ___
 
-### [Project: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
+### [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
 
 ### Objective: 
 The objective of this project is to design and implement high grade automated and monitored for Sparkify, a music streaming company, using Apache Airflow to enhance its data warehouse ETL processes. The main goals and requirements for the project are as follows:
