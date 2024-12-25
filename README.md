@@ -16,7 +16,7 @@ ___
 Objective: 
 The objective of this project is to design and implement high grade automated and monitored for Sparkify, a music streaming company, using Apache Airflow to enhance its data warehouse ETL processes. The main goals and requirements for the project are as follows:
 
-* **Automation and Monitoring:**
+1. **Automation and Monitoring:**
 - Implement automation in the ETL pipelines to streamline and enhance the data processing workflow.
 - Ensure robust monitoring mechanisms to track the performance and health of the data pipelines.
 - Dynamic and Reusable Data Pipelines:
