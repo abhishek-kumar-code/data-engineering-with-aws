@@ -20,16 +20,16 @@ The objective of this project is to design and implement high grade automated an
 - Ensure robust monitoring mechanisms to track the performance and health of the data pipelines.
 
 **2. Dynamic and Reusable Data Pipelines**
-- Design data pipelines that are dynamic, built from reusable tasks, and can be easily modified or extended as needed.
+- Design data pipelines that are dynamic, built from reusable tasks, and can be easily extended as needed.
 - Incorporate functionality for easy backfills to accommodate historical data processing.
 
 **3. Data Quality Assurance**
 - Implement tests to validate data quality after the ETL steps have been executed.
-- Ensure that any discrepancies in the datasets are detected and addressed before analyses are run on the data warehouse.
+- Ensure that any discrepancies in the datasets are detected and addressed before analyses are run on the DW.
 
 **4. Data Integration**
 - The source data, residing in Amazon S3, consists of JSON logs detailing user activity and JSON metadata about songs.
-- Process and load the data into Sparkify's data warehouse on Amazon Redshift, ensuring compatibility and efficient data flow.
+- Process and load the data into Sparkify's DW on Redshift, ensuring compatibility and efficient data flow.
 
 ![Project Logo](automate-data-pipelines-with-airflow/images/final_project_create_table_DAG_Graph.PNG)
 
