@@ -21,6 +21,10 @@ The objective of this project is to design and implement high grade automated an
 - Ensure robust monitoring mechanisms to track the performance and health of the data pipelines.
 - Dynamic and Reusable Data Pipelines:
 
+## Expected Outcomes:
+- **Automated and Monitored Pipelines**
+  - Easy management of ETL processes.
+  - 
 Design data pipelines that are dynamic, built from reusable tasks, and can be easily modified or extended as needed.
 Incorporate functionality for easy backfills to accommodate historical data processing.
 Data Quality Assurance:
