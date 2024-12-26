@@ -14,7 +14,7 @@ ___
 
 ### Objective: 
 
-The objective of this project is to design and implement high grade automated and monitored for Sparkify, a music streaming company, using Apache Airflow to enhance its data warehouse ETL processes. The main goals and requirements for the project are as follows:
+The objective of this project is to design and implement automated and monitored high grade data pipelines for Sparkify, a music streaming company, using Apache Airflow to enhance its data warehouse ETL processes. The main goals and requirements for the project are as follows:
 
 **1. Automation and Monitoring**
 - Implement automation in the ETL pipelines to streamline and enhance the data processing workflow.
@@ -32,6 +32,35 @@ The objective of this project is to design and implement high grade automated an
 - The source data, residing in S3, consists of JSON logs detailing user activity and JSON metadata about songs.
 - Process and load the data into Sparkify's DW on Redshift, ensuring compatibility and efficient data flow.
 
+## Datasets
+
+For this project, you'll be working with two datasets. Here are the S3 links for each:
+
+- **Log Data:**  
+  `s3://udacity-dend/log_data`
+
+- **Song Data:**  
+  `s3://udacity-dend/song-data`
+
+
+### Step 1: Create Your S3 Bucket
+
+Create a S3 bucket using the AWS Cloudshell
+
+```bash
+aws s3 mb s3://akumar-dend/
+
+### Step 2: Copy Data from Udacity's S3 Bucket to Your CloudShell Directory
+
+### Order of Execution 
+1. Copy S3 data from Udacity Bucket to Cloudshell --> Datasets and Copy S3 Data
+2. Copy data from home cloudshell directory to akumar-dend (my S3 bucket)
+3. Configure AWS Redshift Serverless (as per Lesson#3.12)
+4. Add Airflow Connections to AWS Redshift (as per Lesson#3.13 - see images folder for connection)
+5. Add Airflow User Setup (as per Lesson#3.5 - - see images folder for connection)
+6. Run final_project_create_table DAG (create_redshift_tables.py) to trigger create tables in Redshift
+7. Run final_project DAG (final_project.py) to trigger the data pipeline
+   
 ![Project Logo](automate-data-pipelines-with-airflow/images/final_project_create_table_DAG_Graph.PNG)
 
 > [!NOTE]
