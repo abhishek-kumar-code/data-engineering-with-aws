@@ -79,7 +79,14 @@ aws s3 ls s3://your-unique-bucket-name/log_json_path.json
 ### AWS Redshift Serverless Configuration 
 ### Airflow Setup 
 ### DAG Execution
+Trigger final_project_create_table DAG to create tables in Redshift
 
+![Create Table DAG Grid](automate-data-pipelines-with-airflow/images/final_project_create_table_DAG_Grid.PNG)
+
+Run final_project DAG to trigger the ETL data pipeline
+
+![Final Project DAG Grid](automate-data-pipelines-with-airflow/images/final_project_DAG_Grid.PNG)
+   
 ### Order of Execution 
 1. Copy S3 data from Udacity Bucket to Cloudshell --> Datasets and Copy S3 Data
 2. Copy data from home cloudshell directory to akumar-dend (my S3 bucket)
@@ -88,8 +95,6 @@ aws s3 ls s3://your-unique-bucket-name/log_json_path.json
 5. Add Airflow User Setup (as per Lesson#3.5 - - see images folder for connection)
 6. Run final_project_create_table DAG (create_redshift_tables.py) to trigger create tables in Redshift
 7. Run final_project DAG (final_project.py) to trigger the data pipeline
-   
-![Project Logo](automate-data-pipelines-with-airflow/images/final_project_create_table_DAG_Graph.PNG)
 
 > [!NOTE]
 > School of Data Science, Udacity. Program curricula attached below.
