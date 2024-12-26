@@ -32,6 +32,14 @@ The objective of this project is to design and implement automated and monitored
 - The source data, residing in S3, consists of JSON logs detailing user activity and JSON metadata about songs.
 - Process and load the data into Sparkify's DW on Redshift, ensuring compatibility and efficient data flow.
 
+## Airflow DAGs
+
+**1. `final_project_create_table` DAG overview**
+![Create Table DAG](automate-data-pipelines-with-airflow/images/final_project_create_table_DAG_Graph.PNG)
+
+**2. `final_project` DAG overview**
+![Final Project DAG](automate-data-pipelines-with-airflow/images/final_project_DAG_Graph.PNG)
+
 ## Datasets
 
 For this project, you'll be working with two datasets. Here are the S3 links for each:
