@@ -1,6 +1,12 @@
 # Data Engineering with AWS
 
 ### Nanodegree Project
+| Project | Description |
+| --- | --- |
+| Automate Data Pipleines with Airflow  | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) |
+| git diff | Show file differences that haven't been staged |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
 #### > [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
 #### > [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
 #### [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
