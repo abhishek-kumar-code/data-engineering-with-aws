@@ -21,7 +21,7 @@ ___
 
 ## [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
 
-### Objective: 
+## Objective: 
 
 The objective of this project is to design and implement automated and monitored high grade data pipelines for Sparkify, a music streaming company, using Apache Airflow to enhance its data warehouse ETL processes. The main goals and requirements for the project are as follows:
 
