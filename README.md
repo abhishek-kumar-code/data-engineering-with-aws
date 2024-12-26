@@ -42,15 +42,16 @@ For this project, you'll be working with two datasets. Here are the S3 links for
 - **Song Data:**  
   `s3://udacity-dend/song-data`
 
+## Copy S3 Data
 
-### Step 1: Create Your S3 Bucket
-
+#### Step 1: Create Your S3 Bucket
 Create a S3 bucket using the AWS Cloudshell
+`aws s3 mb s3://akumar-dend/`
 
-```bash
-aws s3 mb s3://akumar-dend/
-
-### Step 2: Copy Data from Udacity's S3 Bucket to Your CloudShell Directory
+#### Step 2: Copy Data from Udacity's S3 Bucket to Your CloudShell Directory
+`aws s3 cp s3://udacity-dend/log-data/ ~/log-data/ --recursive
+aws s3 cp s3://udacity-dend/song-data/ ~/song-data/ --recursive
+aws s3 cp s3://udacity-dend/log_json_path.json ~/`
 
 ### Order of Execution 
 1. Copy S3 data from Udacity Bucket to Cloudshell --> Datasets and Copy S3 Data
