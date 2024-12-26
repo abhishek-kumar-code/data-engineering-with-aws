@@ -35,10 +35,10 @@ The objective of this project is to design and implement automated and monitored
 ## Airflow DAGs
 
 **1. `final_project_create_table` DAG overview**
-![Create Table DAG](automate-data-pipelines-with-airflow/images/final_project_create_table_DAG_Graph.PNG)
+![Create Table DAG](automate-data-pipelines-with-airflow/images/final_project_create_table_DAG_Graph_Zoom.PNG)
 
 **2. `final_project` DAG overview**
-![Final Project DAG](automate-data-pipelines-with-airflow/images/final_project_DAG_Graph.PNG)
+![Final Project DAG](automate-data-pipelines-with-airflow/images/final_project_DAG_Graph_Zoom.PNG)
 
 ## Datasets
 
