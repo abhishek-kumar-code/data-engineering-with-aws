@@ -8,7 +8,7 @@
 | Spark and Data Lakes | [STEDI Human Balance Analytics](./automate-data-pipelines-with-airflow) | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
 | Cloud Data Warehouse | [Sparkify Cloud Data Warehouse in Redshift](./automate-data-pipelines-with-airflow) | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
 | Data Modeling | [NoSQL Data Modeling with Apache Cassandra](./automate-data-pipelines-with-airflow) | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
-___
+_____
 ### <ins>Program Learning Outcomes</ins>  
 
 * **Develop proficiency in Spark, Airflow, and Amazon Web Services tools.**
@@ -17,7 +17,7 @@ ___
 * **Work efficiently with massive datasets.**
 * **Create scalable and efficient data warehouses in Cloud.**
 * **Create user-friendly relational and NoSQL data models.**
-___
+_____
 
 # [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
 
