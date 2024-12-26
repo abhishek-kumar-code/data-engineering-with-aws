@@ -1,7 +1,7 @@
 # Data Engineering with AWS
 
 ### Nanodegree Project
-| No. | Project Name| Description | Tech Stack |
+| Sl.No. | Project Name| Description | Tech Stack |
 | --- | --- | --- | --- |
 | Automate Data Pipleines with Airflow  | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) |
 | git diff | Show file differences that haven't been staged |
