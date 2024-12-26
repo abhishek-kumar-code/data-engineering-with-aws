@@ -86,38 +86,52 @@ aws s3 ls s3://your-unique-bucket-name/song-data/
 aws s3 ls s3://your-unique-bucket-name/log_json_path.json
 ```
 
-# AWS Redshift Serverless Configuration Guide
+## AWS Redshift Serverless Configuration Guide
 
-This README provides step-by-step instructions to configure AWS Redshift Serverless, including IAM user creation, role setup, Redshift service configuration, and networking settings.
 
----
+#### 1. Create an IAM User (`awsuser`) in AWS
 
-## **1. Create an IAM User (`awsuser`) in AWS**
-
-To begin, you need to create an IAM user named `awsuser` and assign the appropriate permissions.
-
-### Steps:
-- **Create IAM User (`awsuser`)**
+Create an IAM user named `awsuser` and assign the appropriate permissions.
 - Attach the following policies to the IAM user:
-  - **Administrator Access**
-  - **AmazonRedshiftFullAccess**
-  - **AmazonS3FullAccess**
-
+  - _Administrator Access_
+  - _AmazonRedshiftFullAccess_
+  - _AmazonS3FullAccess_
 These policies ensure the user has the necessary permissions to manage Redshift, S3, and perform administrative tasks.
 
----
-
-## **2. Create a Redshift Role (`redshift-dend`) in AWS CloudShell**
-
-Next, we will create a Redshift Role named `redshift-dend` via AWS CloudShell.
-
-### Steps:
-1. Open **AWS CloudShell**.
-2. Create a Redshift role named `redshift-dend`.
-3. Attach the **AmazonS3FullAccess** policy to the role to provide full access to S3.
-
+#### 2. Create a Redshift Role (`redshift-dend`) via AWS CloudShell
+- Open **AWS CloudShell**.
+  - Attach the **AmazonS3FullAccess** policy to the role to provide full access to S3.
 ```bash
 aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess --role-name my-redshift-service-role
+```
+#### 3. Configure and Setup AWS Redshift Serverless
+-Create a Redshift Role (my-redshift-service-role) in AWS CloudShell.
+-Associate the IAM Role:
+  - Navigate to the Redshift Serverless console.
+  - Under IAM Role, click on Associate IAM Role.
+  - Select the my-redshift-service-role that was created in AWS CloudShell.
+  - Click Associate IAM Roles. This action enables Redshift Serverless to establish a connection with S3.
+  - Grant S3 Full Access to the my-redshift-service-role:
+```bash
+aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess --role-name my-redshift-service-role
+```
+Configure Workgroup Settings:
+
+Accept the default Workgroup settings.
+Accept the defaults for Security and Encryption.
+Enable Enhanced VPC Routing:
+
+Ensure that Enhanced VPC Routing is turned on for better network performance.
+Add Inbound Rule to VPC Security Group:
+
+Go to the VPC Security Group associated with your Redshift cluster.
+Add an Inbound Rule:
+Type: Custom TCP
+Port Range: 0 - 5500
+Source: Anywhere-IPv4
+Copy the Redshift Workgroup Endpoint:
+
+Copy the Redshift Workgroup endpoint and store it locally. This endpoint will be used later when configuring the Redshift connection in Airflow.
 
 ### AWS Redshift Serverless Configuration 
 1. Create an IAM User awsuser in AWS
