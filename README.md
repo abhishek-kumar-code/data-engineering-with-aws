@@ -162,6 +162,54 @@ Port range = 0 - 5500
 Source = Anywhere-iPv4
 Copy and store the Redshift Workgroup endpoint locally, we will need this while configuring Airflow (redshift connection)
 
+# Airflow Connection Configuration Guide
+
+This guide provides step-by-step instructions to configure connections in the Airflow UI for integrating AWS and Amazon Redshift.
+
+---
+
+## **1. Configure AWS Credentials Connection**
+
+To set up an AWS connection in Airflow, follow the steps below.
+
+### **Connection Details:**
+- **Connection ID**: `aws_credentials`
+- **Connection Type**: Amazon Web Services
+
+### **Steps:**
+1. Navigate to the **Airflow UI** and go to the **Connections** page.
+2. Click **Create** to add a new connection.
+3. On the **Create Connection** page, fill in the following values:
+   - **Connection ID**: Enter `aws_credentials`
+   - **Connection Type**: Choose `Amazon Web Services`
+   - **AWS Access Key ID**: Enter the Access Key ID from the IAM User credentials you downloaded earlier.
+   - **AWS Secret Access Key**: Enter the Secret Access Key from the IAM User credentials you downloaded earlier.
+4. Once you’ve entered the necessary values, click **Save** to complete the configuration.
+![aws_credentails](automate-data-pipelines-with-airflow/images/dend-aws_cred-iam-role.PNG)
+---
+
+## **2. Configure Redshift Connection**
+
+To set up a Redshift connection in Airflow, follow the instructions below.
+
+### **Connection Details:**
+- **Connection ID**: `redshift`
+- **Connection Type**: Amazon Redshift
+
+### **Steps:**
+1. Navigate to the **Airflow UI** and go to the **Connections** page.
+2. Click **Create** to add a new connection.
+3. On the **Create Connection** page, fill in the following values:
+   - **Connection ID**: Enter `redshift`
+   - **Connection Type**: Choose `Amazon Redshift`
+   - **Host**: Enter the **endpoint** of your Redshift Serverless workgroup (excluding the port and schema name at the end). You can find this by selecting your workgroup in the Amazon Redshift console.
+     - **IMPORTANT**: Do not include the port and schema name in the endpoint string.
+   - **Schema**: Enter `dev` (the Redshift database you want to connect to).
+   - **Login**: Enter `awsuser` (the IAM user you created).
+   - **Password**: Enter the password you set up when launching Redshift Serverless.
+   - **Port**: Enter `5439` (the default Redshift port).
+4. Once you’ve entered the necessary values, click **Save** to complete the configuration.
+![aws_credentails](automate-data-pipelines-with-airflow/images/dend-redshift-serverless.PNG)
 
 
 ### Airflow Setup
