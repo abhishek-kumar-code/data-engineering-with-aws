@@ -83,8 +83,15 @@ Permissions - attach exiting policies:
 Administrator Access
 AmazonRedshiftFullAccess
 AmazonS3Full Access
+
+Create a Redshift Role called redshift-dend from the AWS Cloudshell
+Now, provide the my-redshift-service-role with full access to S3:
+aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess --role-name my-redshift-service-role
+
+
 2. Configure AWS Redshift Serverless
 Create a Redshift Role my-redshift-service-role from the AWS Cloudshell
+Click on Associate IAM role, and choose the my-redshift-service-role created through the AWS CloudShell. Afterward, click Associate IAM roles. This action enables Redshift Serverless to establish a connection with S3.
 
 Give the role S3 Full Access
 
@@ -97,10 +104,16 @@ Copy and store the Redshift Workgroup endpoint locally, we will need this while 
 Add Airflow Connections:
 
 Connection ID: aws_credentails, Connetion Type: Amazon Web Services
+
+![aws_credentails](automate-data-pipelines-with-airflow/images/dend-aws_cred-iam-role.PNG)
+
 Connection ID: redshift, Connetion Type: Amazon Redshift
+
+![aws_credentails](automate-data-pipelines-with-airflow/images/dend-redshift-serverless.PNG)
+
 4. Configure Variables in Airflow UI - S3 Paths
 Key = s3_bucket
-Value = dend-phoebe (bucket name)
+Value = akumar-dend (bucket name)
 ### Operators
 
 Begin_execution & Stop_execution
