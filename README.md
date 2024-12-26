@@ -1,6 +1,6 @@
 # Data Engineering with AWS
 
-### List of Projects
+### <ins>List of Projects</ins>
 
 | Module | Project Name| Description | Tech Stack |
 | --- | --- | --- | --- |
