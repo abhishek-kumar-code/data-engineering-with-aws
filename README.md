@@ -19,7 +19,7 @@ ___
 * **Create user-friendly relational and NoSQL data models.**
 ___
 
-## [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
+# [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
 
 ## Objective: 
 
