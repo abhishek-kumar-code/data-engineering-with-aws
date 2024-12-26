@@ -1,13 +1,13 @@
 # Data Engineering with AWS
 
-### Nanodegree Project
-| Sl.No. | Project Name| Description | Tech Stack |
+### List of Projects
+| Module | Project Name| Description | Tech Stack |
 | --- | --- | --- | --- |
-| Automate Data Pipleines with Airflow  | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) |
-| git diff | Show file differences that haven't been staged |
-| git status | List all new or modified files |
-| git diff | Show file differences that haven't been staged |
-
+| Automate Data Pipleines with Airflow  | Data Pipelines with Airflow | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
+| Spark and Data Lakes | STEDI Human Balance Analytics | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
+| Cloud Data Warehouse | Sparkify Cloud Data Warehouse in Redshift | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
+| Data Modeling | NoSQL Data Modeling with Apache Cassandra | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
+___
 #### > [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
 #### > [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
 #### [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
