@@ -85,6 +85,40 @@ aws s3 ls s3://your-unique-bucket-name/log-data/
 aws s3 ls s3://your-unique-bucket-name/song-data/
 aws s3 ls s3://your-unique-bucket-name/log_json_path.json
 ```
+
+# AWS Redshift Serverless Configuration Guide
+
+This README provides step-by-step instructions to configure AWS Redshift Serverless, including IAM user creation, role setup, Redshift service configuration, and networking settings.
+
+---
+
+## **1. Create an IAM User (`awsuser`) in AWS**
+
+To begin, you need to create an IAM user named `awsuser` and assign the appropriate permissions.
+
+### Steps:
+- **Create IAM User (`awsuser`)**
+- Attach the following policies to the IAM user:
+  - **Administrator Access**
+  - **AmazonRedshiftFullAccess**
+  - **AmazonS3FullAccess**
+
+These policies ensure the user has the necessary permissions to manage Redshift, S3, and perform administrative tasks.
+
+---
+
+## **2. Create a Redshift Role (`redshift-dend`) in AWS CloudShell**
+
+Next, we will create a Redshift Role named `redshift-dend` via AWS CloudShell.
+
+### Steps:
+1. Open **AWS CloudShell**.
+2. Create a Redshift role named `redshift-dend`.
+3. Attach the **AmazonS3FullAccess** policy to the role to provide full access to S3.
+
+```bash
+aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess --role-name my-redshift-service-role
+
 ### AWS Redshift Serverless Configuration 
 1. Create an IAM User awsuser in AWS
 Permissions - attach exiting policies:
@@ -93,30 +127,54 @@ Administrator Access
 AmazonRedshiftFullAccess
 AmazonS3Full Access
 
-Create a Redshift Role called redshift-dend from the AWS Cloudshell
+2. Create a Redshift Role called redshift-dend from the AWS Cloudshell
 Now, provide the my-redshift-service-role with full access to S3:
 aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess --role-name my-redshift-service-role
 
 
-2. Configure AWS Redshift Serverless
+3. Configure and Setup AWS Redshift Serverless
 Create a Redshift Role my-redshift-service-role from the AWS Cloudshell
 Click on Associate IAM role, and choose the my-redshift-service-role created through the AWS CloudShell. Afterward, click Associate IAM roles. This action enables Redshift Serverless to establish a connection with S3.
 
-Give the role S3 Full Access
-
+Give the role S3 Full Access.
 aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess --role-name my-redshift-service-role
-Setup AWS Redshift Serverless
 
+Accept the default Workgroup settings. 
+Accept the defaults for Security and encryption.
+Turn on enhanced VPC routing 
+Add an inbound rule, under VPC security group.
+Type = Custom TCP
+Port range = 0 - 5500
+Source = Anywhere-iPv4
 Copy and store the Redshift Workgroup endpoint locally, we will need this while configuring Airflow (redshift connection)
+
+
+
 ### Airflow Setup
 3. Configure Connections in Airflow UI
 Add Airflow Connections:
 
 Connection ID: aws_credentails, Connetion Type: Amazon Web Services
 
+On the create connection page, enter the following values:
+Connection Id: Enter aws_credentials.
+Connection Type: Enter Amazon Web Services.
+AWS Access Key ID: Enter your Access key ID from the IAM User credentials you downloaded earlier.
+AWS Secret Access Key: Enter your Secret access key from the IAM User credentials you downloaded earlier. Once you've entered these values, select Save.
+
 ![aws_credentails](automate-data-pipelines-with-airflow/images/dend-aws_cred-iam-role.PNG)
 
 Connection ID: redshift, Connetion Type: Amazon Redshift
+
+On the Airflow create connection page, enter the following values:
+
+Connection Id: Enter redshift.
+Connection Type: Choose Amazon Redshift.
+Host: Enter the endpoint of your Redshift Serverless workgroup, excluding the port and schema name at the end. You can find this by selecting your workgroup in the Amazon Redshift console. See where this is located in the screenshot below. IMPORTANT: Make sure to NOT include the port and schema name at the end of the Redshift endpoint string.
+Schema: Enter dev. This is the Redshift database you want to connect to.
+Login: Enter awsuser.
+Password: Enter the password you created when launching Redshift serverless.
+Port: Enter 5439. Once you've entered these values, select Save.
 
 ![aws_credentails](automate-data-pipelines-with-airflow/images/dend-redshift-serverless.PNG)
 
