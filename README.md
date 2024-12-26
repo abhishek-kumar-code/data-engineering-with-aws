@@ -8,11 +8,6 @@
 | Cloud Data Warehouse | Sparkify Cloud Data Warehouse in Redshift | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
 | Data Modeling | NoSQL Data Modeling with Apache Cassandra | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
 ___
-#### > [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
-#### > [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
-#### [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
-#### [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
-
 ### <ins>Program Learning Outcomes</ins>  
 
 * **Develop proficiency in Spark, Airflow, and Amazon Web Services tools.**
