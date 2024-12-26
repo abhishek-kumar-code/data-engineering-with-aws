@@ -122,7 +122,7 @@ Run data quality checks to ensure no empty tables
 ### DAG Execution
 Trigger final_project_create_table DAG to create tables in Redshift
 
-![Airflow Dashboard](automate-data-pipelines-with-airflow/images/airflow DAGs Dashboard.PNG)
+![Airflow Dashboard](automate-data-pipelines-with-airflow/images/airflow_DAGs_Dashboard.PNG)
 
 Trigger final_project_create_table DAG to create tables in Redshift
 
