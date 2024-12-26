@@ -53,6 +53,19 @@ Create a S3 bucket using the AWS Cloudshell
 aws s3 cp s3://udacity-dend/log-data/ ~/log-data/ --recursive
 aws s3 cp s3://udacity-dend/song-data/ ~/song-data/ --recursive
 aws s3 cp s3://udacity-dend/log_json_path.json ~/
+```
+#### Step 3: Copy Data from Your CloudShell Directory to Your Own S3 Bucket
+```bash
+aws s3 cp ~/log-data/ s3://akumar-dend/log-data/ --recursive
+aws s3 cp ~/song-data/ s3://akumar-dend/song-data/ --recursive
+aws s3 cp ~/log_json_path.json s3://akumar-dend/
+```
+#### Step 4: Verify the Data is in Your S3 Bucket
+```bash
+aws s3 ls s3://your-unique-bucket-name/log-data/
+aws s3 ls s3://your-unique-bucket-name/song-data/
+aws s3 ls s3://your-unique-bucket-name/log_json_path.json
+```
 
 ### Order of Execution 
 1. Copy S3 data from Udacity Bucket to Cloudshell --> Datasets and Copy S3 Data
