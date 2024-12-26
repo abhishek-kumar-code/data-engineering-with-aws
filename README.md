@@ -77,7 +77,48 @@ aws s3 ls s3://your-unique-bucket-name/song-data/
 aws s3 ls s3://your-unique-bucket-name/log_json_path.json
 ```
 ### AWS Redshift Serverless Configuration 
-### Airflow Setup 
+1. Create an IAM User awsuser in AWS
+Permissions - attach exiting policies:
+
+Administrator Access
+AmazonRedshiftFullAccess
+AmazonS3Full Access
+2. Configure AWS Redshift Serverless
+Create a Redshift Role my-redshift-service-role from the AWS Cloudshell
+
+Give the role S3 Full Access
+
+aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess --role-name my-redshift-service-role
+Setup AWS Redshift Serverless
+
+Copy and store the Redshift Workgroup endpoint locally, we will need this while configuring Airflow (redshift connection)
+### Airflow Setup
+3. Configure Connections in Airflow UI
+Add Airflow Connections:
+
+Connection ID: aws_credentails, Connetion Type: Amazon Web Services
+Connection ID: redshift, Connetion Type: Amazon Redshift
+4. Configure Variables in Airflow UI - S3 Paths
+Key = s3_bucket
+Value = dend-phoebe (bucket name)
+### Operators
+
+Begin_execution & Stop_execution
+
+Dummy operators representing DAG start and end point
+
+Stage_events & Stage_songs
+
+Extract and Load data from S3 to Amazon Redshift
+
+Load_songplays_fact_table & Load_*_dim_table
+
+Load and Transform data from staging to fact and dimension tables
+
+Run_data_quality_checks
+
+![Task dependencies](automate-data-pipelines-with-airflow/images/Project_Workspace_sourcecode_operators_sqlstatements.PNG)
+Run data quality checks to ensure no empty tables
 ### DAG Execution
 Trigger final_project_create_table DAG to create tables in Redshift
 
