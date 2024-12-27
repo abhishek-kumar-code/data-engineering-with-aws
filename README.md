@@ -92,7 +92,7 @@ aws s3 ls s3://akumar-dend/song-data/
 aws s3 ls s3://akumar-dend/log_json_path.json
 ```
 
-## AWS Redshift Serverless Configuration Guide
+## AWS Redshift Serverless Configuration
 
 #### Step 1: Create an IAM User (`awsuser`) in AWS
 
