@@ -2,12 +2,12 @@
 
 ### <ins>List of Projects</ins>
 
-| Module | Project Name| Description | Tech Stack |
-| --- | --- | --- | --- |
-| Automate Data Pipleines | [Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
-| Spark and Data Lakes | [STEDI Human Balance Analytics](./automate-data-pipelines-with-airflow) | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
-| Cloud Data Warehouse | [Sparkify Cloud Data Warehouse in Redshift](./automate-data-pipelines-with-airflow) | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
-| Data Modeling | [NoSQL Data Modeling with Apache Cassandra](./automate-data-pipelines-with-airflow) | [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow |
+| Module | Project Name| Tech Stack |
+| --- | --- | --- |
+| Automate Data Pipleines | [Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow, AWS Redshift |
+| Spark and Data Lakes | [STEDI Human Balance Analytics](./automate-data-pipelines-with-airflow) | Spark |
+| Cloud Data Warehouse | [Sparkify Cloud Data Warehouse in Redshift](./automate-data-pipelines-with-airflow) | Redshift |
+| Data Modeling | [NoSQL Data Modeling with Apache Cassandra](./automate-data-pipelines-with-airflow) | Apache Cassandra |
 _____
 ### <ins>Program Learning Outcomes</ins>  
 
