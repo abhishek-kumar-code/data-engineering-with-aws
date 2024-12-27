@@ -128,8 +128,8 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAcce
 
 ##### **Connection Details:**
 ```bash
-- **Connection ID**: `aws_credentials`
-- **Connection Type**: Amazon Web Services
+- Connection ID: aws_credentials
+- Connection Type: Amazon Web Services
 ```
 
 ##### **Steps:**
