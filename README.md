@@ -137,8 +137,8 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAcce
 
 #### Step 2. Configure Redshift Connection in Airflow
 
-1. Navigate to the **Airflow UI** and go to the **Connections** page. Click **Create** to add a new connection.
-2. On the **Create Connection** page, fill in the following values:
+- Navigate to the **Airflow UI** and go to the **Connections** page. Click **Create** to add a new connection.
+- On the **Create Connection** page, fill in the following values:
    - **Connection ID**: Enter `redshift`
    - **Connection Type**: Choose `Amazon Redshift`
    - **Host**: Enter the **endpoint** of your Redshift Serverless workgroup (excluding the port and schema name at the end). 
@@ -149,7 +149,7 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAcce
 
 ![aws_credentails](automate-data-pipelines-with-airflow/images/dend-redshift-serverless.PNG)
 
-## Operators
+## Tasks, Operators & Task Depedencies
 
 - `Begin_execution` and `Stop_execution`
   - Dummy operators representing DAG start and end point
@@ -168,15 +168,15 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAcce
 ![Task dependencies](automate-data-pipelines-with-airflow/images/Project_Workspace_sourcecode_operators_sqlstatements.PNG)
 
 ## DAG Execution
-Trigger final_project_create_table DAG to create tables in Redshift
+- DAG Dashboard
 
 ![Airflow Dashboard](automate-data-pipelines-with-airflow/images/airflow_DAGs_Dashboard.PNG)
 
-Trigger final_project_create_table DAG to create tables in Redshift
+- Trigger final_project_create_table DAG to create tables in Redshift
 
 ![Create Table DAG Grid](automate-data-pipelines-with-airflow/images/final_project_create_table_DAG_Grid.PNG)
 
-Run final_project DAG to trigger the ETL data pipeline
+- Run final_project DAG to trigger the ETL data pipeline
 
 ![Final Project DAG Grid](automate-data-pipelines-with-airflow/images/final_project_DAG_Grid.PNG)
 
