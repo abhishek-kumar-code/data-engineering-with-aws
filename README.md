@@ -17,6 +17,12 @@ _____
 * **Work efficiently with massive datasets.**
 * **Create scalable and efficient data warehouses in Cloud.**
 * **Create user-friendly relational and NoSQL data models.**
+
+> [!NOTE]
+> ###### _School of Data Science, Udacity Inc., Mountain View, CA. "Nanodegree" is a registered trademark of Udacity. © 2011-2024 Udacity, Inc._
+
+> [!TIP]
+> ###### _More information about this program can be found by visiting [Udacity Data Engineering Nanodegree](https://www.udacity.com/catalog)._
 _____
 
 # [Project 1: Data Pipelines with Airflow](./automate-data-pipelines-with-airflow)
@@ -278,8 +284,4 @@ Run final_project DAG to trigger the ETL data pipeline
 
 ![Final Project DAG Grid](automate-data-pipelines-with-airflow/images/final_project_DAG_Grid.PNG)
    
-> [!NOTE]
-> ###### _School of Data Science, Udacity Inc., Mountain View, CA. "Nanodegree" is a registered trademark of Udacity. © 2011-2024 Udacity, Inc._
 
-> [!TIP]
-> ###### _More information about this program can be found by visiting [Udacity Data Engineering Nanodegree](https://www.udacity.com/catalog)._
