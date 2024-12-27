@@ -2,12 +2,12 @@
 
 ### <ins>List of Projects</ins>
 
-| Module | Project Name | Tech Stack |
+| Module | Project Name |
 | --- | --- | --- |
-| Automate Data Pipleines | [Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow, AWS Redshift |
-| Spark and Data Lakes | [STEDI Human Balance Analytics](./automate-data-pipelines-with-airflow) | Spark |
-| Cloud Data Warehouse | [Sparkify Cloud Data Warehouse in Redshift](./automate-data-pipelines-with-airflow) | Redshift |
-| Data Modeling | [NoSQL Data Modeling with Apache Cassandra](./automate-data-pipelines-with-airflow) | Apache Cassandra |
+| Automate Data Pipleines | [Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | 
+| Spark and Data Lakes | [STEDI Human Balance Analytics](./automate-data-pipelines-with-airflow) |
+| Cloud Data Warehouse | [Sparkify Cloud Data Warehouse in Redshift](./automate-data-pipelines-with-airflow) | 
+| Data Modeling | [NoSQL Data Modeling with Apache Cassandra](./automate-data-pipelines-with-airflow) | 
 _____
 ### <ins>Program Learning Outcomes</ins>  
 
@@ -190,4 +190,8 @@ Trigger final_project_create_table DAG to create tables in Redshift
 Run final_project DAG to trigger the ETL data pipeline
 
 ![Final Project DAG Grid](automate-data-pipelines-with-airflow/images/final_project_DAG_Grid.PNG)
+
+_____
+
+# [Project 2: STEDI Human Balance Analytics](./automate-data-pipelines-with-airflow)
    
