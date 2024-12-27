@@ -279,7 +279,7 @@ Run final_project DAG to trigger the ETL data pipeline
 ![Final Project DAG Grid](automate-data-pipelines-with-airflow/images/final_project_DAG_Grid.PNG)
    
 > [!NOTE]
-> Bootcamp from School of Data Science, Udacity Inc., Mountain View, California. "Nanodegree" is a registered trademark of Udacity. © 2011-2024 Udacity, Inc
-> 
+> Bootcamp from School of Data Science, Udacity Inc., Mountain View, California. "Nanodegree" is a registered trademark of Udacity. © 2011-2024 Udacity, Inc.
+
 > [!TIP]
->More information about this program can be found by visiting [Udacity Data Engineering ND](https://www.udacity.com/course/data-engineer-nanodegree--nd027).
+> More information about this program can be found by visiting [Udacity Data Engineering Nanodegree](https://www.udacity.com/catalog).
