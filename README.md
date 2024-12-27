@@ -243,24 +243,28 @@ Port: Enter 5439. Once you've entered these values, select Save.
 4. Configure Variables in Airflow UI - S3 Paths
 Key = s3_bucket
 Value = akumar-dend (bucket name)
+
 ### Operators
 
-Begin_execution & Stop_execution
+Begin_execution and Stop_execution
 
 Dummy operators representing DAG start and end point
 
-Stage_events & Stage_songs
+Stage_events and Stage_songs
 
-Extract and Load data from S3 to Amazon Redshift
+The stage operator loads JSON-formatted files from S3 to Amazon Redshift. 
 
 Load_songplays_fact_table & Load_*_dim_table
 
-Load and Transform data from staging to fact and dimension tables
+Load and Transform data from staging to fact and dimension target tables
 
-Run_data_quality_checks
+Data_quality_tests
+
+The final operator to create is the data quality operator, which runs checks on the data itself. The operator's main functionality is to receive one or more SQL based test cases along with the expected results and execute the tests.
 
 ![Task dependencies](automate-data-pipelines-with-airflow/images/Project_Workspace_sourcecode_operators_sqlstatements.PNG)
 Run data quality checks to ensure no empty tables
+
 ### DAG Execution
 Trigger final_project_create_table DAG to create tables in Redshift
 
@@ -274,15 +278,8 @@ Run final_project DAG to trigger the ETL data pipeline
 
 ![Final Project DAG Grid](automate-data-pipelines-with-airflow/images/final_project_DAG_Grid.PNG)
    
-### Order of Execution 
-1. Copy S3 data from Udacity Bucket to Cloudshell --> Datasets and Copy S3 Data
-2. Copy data from home cloudshell directory to akumar-dend (my S3 bucket)
-3. Configure AWS Redshift Serverless (as per Lesson#3.12)
-4. Add Airflow Connections to AWS Redshift (as per Lesson#3.13 - see images folder for connection)
-5. Add Airflow User Setup (as per Lesson#3.5 - - see images folder for connection)
-6. Run final_project_create_table DAG (create_redshift_tables.py) to trigger create tables in Redshift
-7. Run final_project DAG (final_project.py) to trigger the data pipeline
-
 > [!NOTE]
-> School of Data Science, Udacity. Program curricula attached below.
-[Program Syllabus](./Data%2BEngineering%2BNanodegree%2BProgram%2BSyllabus.pdf), more information about this program can be found by visiting [Udacity Data Engineering ND](https://www.udacity.com/course/data-engineer-nanodegree--nd027).
+> Bootcamp from School of Data Science, Udacity Inc., Mountain View, California. "Nanodegree" is a registered trademark of Udacity. © 2011-2024 Udacity, Inc
+> 
+> [!TIP]
+>More information about this program can be found by visiting [Udacity Data Engineering ND](https://www.udacity.com/course/data-engineer-nanodegree--nd027).
