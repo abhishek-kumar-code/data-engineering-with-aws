@@ -3,7 +3,7 @@
 ### <ins>List of Projects</ins>
 
 | Module | Project Name |
-| --- | --- | --- |
+| --- | --- |
 | Automate Data Pipleines | [Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | 
 | Spark and Data Lakes | [STEDI Human Balance Analytics](./automate-data-pipelines-with-airflow) |
 | Cloud Data Warehouse | [Sparkify Cloud Data Warehouse in Redshift](./automate-data-pipelines-with-airflow) | 
