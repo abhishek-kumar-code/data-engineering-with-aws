@@ -137,11 +137,6 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAcce
 
 #### Step 2. Configure Redshift Connection in Airflow
 
-##### **Connection Details:**
-- **Connection ID**: `redshift`
-- **Connection Type**: Amazon Redshift
-
-##### **Steps:**
 1. Navigate to the **Airflow UI** and go to the **Connections** page. Click **Create** to add a new connection.
 2. On the **Create Connection** page, fill in the following values:
    - **Connection ID**: Enter `redshift`
