@@ -168,15 +168,16 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAcce
 ![Task dependencies](automate-data-pipelines-with-airflow/images/Project_Workspace_sourcecode_operators_sqlstatements.PNG)
 
 ## DAG Execution
+
 - DAG Dashboard
 
 ![Airflow Dashboard](automate-data-pipelines-with-airflow/images/airflow_DAGs_Dashboard.PNG)
 
-- Trigger final_project_create_table DAG to create tables in Redshift
+- Trigger **`final_project_create_table`** DAG to create tables in Redshift
 
 ![Create Table DAG Grid](automate-data-pipelines-with-airflow/images/final_project_create_table_DAG_Grid.PNG)
 
-- Run final_project DAG to trigger the ETL data pipeline
+- Run **`final_project`** DAG to trigger the ETL data pipeline
 
 ![Final Project DAG Grid](automate-data-pipelines-with-airflow/images/final_project_DAG_Grid.PNG)
 
