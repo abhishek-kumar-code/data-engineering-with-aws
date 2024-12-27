@@ -126,15 +126,8 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAcce
 
 #### Step 1. Configure AWS Credentials Connection in Airflow
 
-##### **Connection Details:**
-```bash
-- Connection ID: aws_credentials
-- Connection Type: Amazon Web Services
-```
-
-##### **Steps:**
-1. Navigate to the **Airflow UI** and go to the **Connections** page. Click **Create** to add a new connection.
-2. On the **Create Connection** page, fill in the following values:
+- Navigate to the **Airflow UI** and go to the **Connections** page. Click **Create** to add a new connection.
+- On the **Create Connection** page, fill in the following values:
    - **Connection ID**: Enter `aws_credentials`
    - **Connection Type**: Choose `Amazon Web Services`
    - **AWS Access Key ID**: Enter the Access Key ID from the IAM User credentials you downloaded earlier.
