@@ -97,7 +97,6 @@ aws s3 ls s3://akumar-dend/log_json_path.json
 #### Step 1: Create an IAM User (`awsuser`) in AWS
 
 Create an IAM user named `awsuser` and assign the appropriate permissions.
-
 - Attach the following policies to the IAM user:
   - _Administrator Access_
   - _AmazonRedshiftFullAccess_
@@ -112,7 +111,7 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAcce
 
 #### Step 3. Configure and Setup AWS Redshift Serverless
 
-- Associate the IAM Role. This action enables Redshift Serverless to establish a connection with S3
+- Associate the IAM Role to establish a connection between Redshift Serverless and S3. 
 - Configure Workgroup Settings:
   - Accept the default Workgroup settings.
   - Accept the defaults for Security and Encryption.
@@ -121,15 +120,17 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAcce
     - Type: Custom TCP
     - Port Range: 0 - 5500
     - Source: Anywhere-IPv4
-    - Copy the Redshift Workgroup Endpoint. This endpoint will be used later when configuring the Redshift connection in Airflow.
+    - Copy the Redshift Workgroup Endpoint (will be used later when configuring the Redshift connection in Airflow)
 
 ## Airflow Connection Configuration 
 
 #### Step 1. Configure AWS Credentials Connection in Airflow
 
 ##### **Connection Details:**
+```bash
 - **Connection ID**: `aws_credentials`
 - **Connection Type**: Amazon Web Services
+```
 
 ##### **Steps:**
 1. Navigate to the **Airflow UI** and go to the **Connections** page. Click **Create** to add a new connection.
