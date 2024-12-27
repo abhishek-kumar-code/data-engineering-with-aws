@@ -2,7 +2,7 @@
 
 ### <ins>List of Projects</ins>
 
-| Module | Project Name| Tech Stack |
+| Module | Project Name | Tech Stack |
 | --- | --- | --- |
 | Automate Data Pipleines | [Data Pipelines with Airflow](./automate-data-pipelines-with-airflow) | Apache Airflow, AWS Redshift |
 | Spark and Data Lakes | [STEDI Human Balance Analytics](./automate-data-pipelines-with-airflow) | Spark |
@@ -17,6 +17,7 @@ _____
 * **Work efficiently with massive datasets.**
 * **Create scalable and efficient data warehouses in Cloud.**
 * **Create user-friendly relational and NoSQL data models.**
+_____
 
 > [!NOTE]
 > ###### _School of Data Science, Udacity Inc., Mountain View, CA. "Nanodegree" is a registered trademark of Udacity. © 2011-2024 Udacity, Inc._
