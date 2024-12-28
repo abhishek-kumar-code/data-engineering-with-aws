@@ -206,7 +206,6 @@ The STEDI Step Trainer is a device designed to help users with balance exercises
 
 The **Medallion Architecture** is a key feature of a **lakehouse architecture** that allows for the efficient ingestion and incremental improvement of data. This architecture organizes data into stages, each representing a different level of refinement. Each stage is symbolized by a color, similar to the medals in the Olympics.
 
-![Medallion_Architecture](spark-and-data-lakes/images/lakehouse_architecture.PNG)
 ![Image Alt Text](spark-and-data-lakes/images/lakehouse_architecture.png)
 
 ### Stages of Data Refinement
