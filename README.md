@@ -233,7 +233,7 @@ STEDI provides three JSON data sources for use with the **Step Trainer**. These 
 - **step_trainer**
 - **accelerometer**
 
-- 1. Customer Records: This dataset contains information from **fulfillment** and the **STEDI website**.
+#### 1. Customer Records: This dataset contains information from **fulfillment** and the **STEDI website**.
   - **AWS S3 Bucket URI**: `s3://cd0030bucket/customers/`
 
 ## 2. Step Trainer Records
