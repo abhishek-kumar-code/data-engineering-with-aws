@@ -291,11 +291,11 @@ A data quality issue exists where **Customer Records** in the **Landing Zone** c
 #### Stage 4: Create Spark Jobs to support further data processing
 
 - **Job 4**: Step Trainer Trusted Data
-- **Task**: Read the **Step Trainer IoT data stream** (S3) and populate a **Trusted Zone Glue Table** called `step_trainer_trusted`:
+  - Read the **Step Trainer IoT data stream** (S3) and populate a **Trusted Zone Glue Table** called `step_trainer_trusted`:
   - Only include data for customers who have **accelerometer data** and agreed to share their data for research purposes (from `customers_curated`).
 
 - **Job 5**: Machine Learning Curated Data
-- **Task**: Create an aggregated table that combines **Step Trainer Readings** and the corresponding **Accelerometer Readings**:
+  - Create an aggregated table that combines **Step Trainer Readings** and the corresponding **Accelerometer Readings**:
   - Match data based on the **same timestamp**.
   - Store this aggregated data in a Glue Table called `machine_learning_curated`:
     - Include only data from customers who agreed to share their data for research purposes.
@@ -321,5 +321,5 @@ As part of the project, it is essential to validate the data at each stage to en
    - **Customer**: 482 rows
    - **Machine Learning**: 43,681 rows
 
-
+## Final State and Results
 
