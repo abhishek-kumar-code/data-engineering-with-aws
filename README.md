@@ -187,19 +187,82 @@ _____
 
 ## Objective
 
-This project involves building a **cloud-based data lakehouse solution** for sensor data collected by the STEDI Step Trainer and its mobile app to train a **machine learning model**. The solution will use: **PySpark**, **AWS Glue**, **AWS Athena** and **AWS S3**
+This project involves building a **cloud-based data lakehouse solution** for sensor data collected by the STEDI Step Trainer and its mobile app to train a **machine learning model**. The solution will use: 
 - **PySpark**: For processing large datasets.
 - **AWS Glue**: Managed ETL for data preparation.
 - **AWS Athena**: Serverless querying of data.
 - **AWS S3**: Scalable storage for raw and processed data.
-As a **Data Engineer**, you will extract and curate data from the **Step Trainer sensors** and the **mobile app** into the data lakehouse on **AWS**, enabling **Data Scientists** to train the model.
+As a Data Engineer, you will extract and curate data from the **Step Trainer sensors** and the **mobile app** into the data lakehouse on AWS, enabling Data Scientists to train the model.
 
 ### STEDI Step Trainer Overview
 
-The **STEDI Step Trainer** is a device designed to help users with balance exercises. It has the following features:
+The STEDI Step Trainer is a device designed to help users with balance exercises. It has the following features:
 
 - **Sensors** detect motion and distance.
 - The **mobile app** collects customer data and accelerometer data (X, Y, Z directions) for motion tracking.
 - **Data Privacy Considerations**: Only data from **consenting customers** will be used for the machine learning model, ensuring privacy is prioritized.
+
+## Lakehouse Architecture
+
+The **Medallion Architecture** is a key feature of a **lakehouse architecture** that allows for the efficient ingestion and incremental improvement of data. This architecture organizes data into stages, each representing a different level of refinement. Each stage is symbolized by a color, similar to the medals in the Olympics.
+
+![Medallion Architecture](automate-data-pipelines-with-airflow/images/final_project_DAG_Grid.PNG)
+
+### Stages of Data Refinement
+
+1. **Bronze (Raw Data)**: This is the initial stage where raw, unprocessed data is ingested into the lakehouse.
+   - **Characteristics**:
+     - Data may contain errors, duplicates, or inconsistencies.
+     - Minimal processing or transformation has been applied.
+ 
+2. **Silver (Cleaned and Augmented Data)**: At this stage, the data undergoes filtering, cleaning, and augmentation to improve quality.
+   - **Characteristics**:
+     - Errors and duplicates are removed.
+     - Data is transformed to ensure consistency and standardization.
+
+3. **Gold (Business-Level Aggregates)**: The final stage where data is aggregated to a business level, often using structures like **star schemas** for easy reporting and analytics.
+   - **Characteristics**:
+     - Includes business-level aggregates, metrics, and KPIs.
+     - Ready for consumption by business analysts or reporting tools.
+
+## Datasets
+
+STEDI provides three JSON data sources for use with the **Step Trainer**. These datasets are available in the following folders in the GitHub repository:
+
+- **customer**
+- **step_trainer**
+- **accelerometer**
+
+- 1. Customer Records: This dataset contains information from **fulfillment** and the **STEDI website**.
+  - **AWS S3 Bucket URI**: `s3://cd0030bucket/customers/`
+
+## 2. Step Trainer Records
+
+This dataset includes data from the **motion sensor** on the Step Trainer device.
+
+- **AWS S3 Bucket URI**: `s3://cd0030bucket/step_trainer/`
+
+## 3. Accelerometer Records
+
+This dataset contains data from the **mobile app’s accelerometer**.
+
+- **AWS S3 Bucket URI**: `s3://cd0030bucket/accelerometer/`
+
+## S3 Bucket Structure
+```bash
+customer/
+- landing/
+- trusted/
+- curated/
+accelerometer/
+- landing/
+- trusted/
+step_trainer/
+- landing/
+- trusted/
+- curated/
+```
+
+Upload the directories to your S3 bucket and use them to create **AWS Glue tables**. Your S3 bucket should have the following structure:
 
 
