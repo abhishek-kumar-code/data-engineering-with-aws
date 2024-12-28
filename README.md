@@ -184,4 +184,38 @@ aws iam attach-role-policy --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAcce
 _____
 
 # [Project 2: STEDI Human Balance Analytics](./automate-data-pipelines-with-airflow)
-   
+
+## Project Overview
+
+This project involves building a **data lakehouse solution** for sensor data collected by the **STEDI Step Trainer** and its **mobile app** to train a **machine learning model**. The solution will use:
+
+- **PySpark**
+- **AWS Glue**
+- **AWS Athena**
+- **AWS S3**
+
+As a **Data Engineer**, you will extract and curate data from the **Step Trainer sensors** and the **mobile app** into the data lakehouse on **AWS**, enabling **Data Scientists** to train the model.
+
+## STEDI Step Trainer Overview
+
+The **STEDI Step Trainer** is a device designed to help users with balance exercises. It has the following features:
+
+- **Sensors** detect motion and distance.
+- The **mobile app** collects customer data and accelerometer data (X, Y, Z directions) for motion tracking.
+
+### Early Adoption
+
+Millions of early adopters are using the device, providing valuable data for training the machine learning model. 
+
+## Data Privacy Considerations
+
+Only data from **consenting customers** will be used for the machine learning model, ensuring privacy is prioritized.
+
+## Technologies
+
+- **PySpark**: For processing large datasets.
+- **AWS Glue**: Managed ETL for data preparation.
+- **AWS Athena**: Serverless querying of data.
+- **AWS S3**: Scalable storage for raw and processed data.
+
+By the end of the project, you will have built a cloud-based data lakehouse solution for training the machine learning model.
