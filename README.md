@@ -206,7 +206,7 @@ The STEDI Step Trainer is a device designed to help users with balance exercises
 
 The **Medallion Architecture** is a key feature of a **lakehouse architecture** that allows for the efficient ingestion and incremental improvement of data. This architecture organizes data into stages, each representing a different level of refinement. Each stage is symbolized by a color, similar to the medals in the Olympics.
 
-![Medallion Architecture](automate-data-pipelines-with-airflow/images/final_project_DAG_Grid.PNG)
+![Medallion Architecture](spark-and-data-lakes/images/lakehouse_architecture.PNG)
 
 ### Stages of Data Refinement
 
@@ -233,8 +233,9 @@ STEDI provides three JSON data sources for use with the **Step Trainer**. These 
 - **step_trainer**
 - **accelerometer**
 
-#### 1. Customer Records: This dataset contains information from **fulfillment** and the **STEDI website**.
-  - **AWS S3 Bucket URI**: `s3://cd0030bucket/customers/`
+### 1. Customer Records: 
+This dataset contains information from **fulfillment** and the **STEDI website**.
+  - `s3://cd0030bucket/customers/`
 
 ## 2. Step Trainer Records
 
