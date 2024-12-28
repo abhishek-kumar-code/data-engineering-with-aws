@@ -235,21 +235,18 @@ STEDI provides three JSON data sources for use with the **Step Trainer**. These 
 
 ### 1. Customer Records: 
 This dataset contains information from **fulfillment** and the **STEDI website**.
-  - `s3://cd0030bucket/customers/`
+  - **AWS S3 Bucket URI**: `s3://cd0030bucket/customers/`
 
-## 2. Step Trainer Records
-
+### 2. Step Trainer Records
 This dataset includes data from the **motion sensor** on the Step Trainer device.
-
 - **AWS S3 Bucket URI**: `s3://cd0030bucket/step_trainer/`
 
-## 3. Accelerometer Records
-
+### 3. Accelerometer Records
 This dataset contains data from the **mobile app’s accelerometer**.
-
 - **AWS S3 Bucket URI**: `s3://cd0030bucket/accelerometer/`
 
 ## S3 Bucket Structure
+On completion of this project, the S3 bucket should have the following directory structure:
 ```bash
 customer/
 - landing/
@@ -263,7 +260,5 @@ step_trainer/
 - trusted/
 - curated/
 ```
-
-Upload the directories to your S3 bucket and use them to create **AWS Glue tables**. Your S3 bucket should have the following structure:
 
 
