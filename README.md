@@ -258,26 +258,19 @@ step_trainer/
 - curated/
 ```
 
-# Project Details
+## Project Details
 
-This project involves creating and managing **AWS Glue** tables for different datasets and performing data sanitization, validation, and aggregation tasks to support data analysis and machine learning model training. Below is a step-by-step breakdown of the tasks and deliverables for this project.
+This project involves creating and managing **AWS Glue** tables for different datasets and performing data sanitization, validation, and aggregation tasks to support data analysis and machine learning model training.
 
-## 1. Create Glue Tables for Landing Zones
+#### Stage 1: Create Glue Tables for Landing Zones
 
-To get a feel for the data, you will create three Glue tables for the three landing zones. Share the following SQL scripts in your GitHub repository:
+To get a feel for the data, you will create three Glue tables for the three landing zones. Query the tables using AWS Athena.
 
 - `customer_landing.sql`
 - `accelerometer_landing.sql`
 - `step_trainer_landing.sql`
 
-### Steps:
-- **Query the tables using AWS Athena**.
-- **Take screenshots** of each query result and name the screenshots as follows:
-  - `customer_landing(.png, .jpeg, etc.)`
-  - `accelerometer_landing(.png, .jpeg, etc.)`
-  - `step_trainer_landing(.png, .jpeg, etc.)`
-
-## 2. Create Glue Jobs for Sanitizing Customer and Accelerometer Data
+#### Stage 2: Create Spark Jobs for Sanitizing Customer and Accelerometer Data
 
 The **Data Science team** has identified that the **Accelerometer Records** match **Customer Records**. You need to create two AWS Glue jobs to sanitize the data:
 
@@ -287,32 +280,46 @@ The **Data Science team** has identified that the **Accelerometer Records** matc
 - **Job 2**: Sanitize **Accelerometer Data** (from Mobile App, Landing Zone).
   - Store **only accelerometer readings** from customers who agreed to share their data for research purposes in a new Glue Table called `accelerometer_trusted`.
 
-### Verification:
-- **Query the `customer_trusted` table** in Athena to verify the data includes only records from customers who agreed to share their data.
-- **Take a screenshot** of the query result and name it `customer_trusted(.png, .jpeg, etc.)`.
-
-## 3. Handle Data Quality Issue with Serial Numbers
+#### Stage 3: Create Spark Jobs to handle Data Quality Issue with Serial Numbers
 
 A data quality issue exists where **Customer Records** in the **Landing Zone** contain duplicate serial numbers for many customers. However, **Step Trainer Records** contain the correct serial numbers.
 
-### Task:
-- Create a Glue job that sanitizes **Customer Data** (from Trusted Zone) and:
+- **Job 3**: Create a Spark job that sanitizes **Customer Data** (from Trusted Zone) and:
   - **Matches** customers with corresponding **Accelerometer Data**.
   - Creates a new Glue Table called `customers_curated`, containing **only customers who have accelerometer data** and agreed to share their data.
 
-## 4. Create Spark Jobs
+#### Stage 4: Create Spark Jobs to support further data processing
 
-Spark Jobs need to be created to support further data processing:
-
-### Job 1: Step Trainer Trusted Data
+- **Job 4**: Step Trainer Trusted Data
 - **Task**: Read the **Step Trainer IoT data stream** (S3) and populate a **Trusted Zone Glue Table** called `step_trainer_trusted`:
   - Only include data for customers who have **accelerometer data** and agreed to share their data for research purposes (from `customers_curated`).
 
-### Job 2: Machine Learning Curated Data
+- **Job 5**: Machine Learning Curated Data
 - **Task**: Create an aggregated table that combines **Step Trainer Readings** and the corresponding **Accelerometer Readings**:
   - Match data based on the **same timestamp**.
   - Store this aggregated data in a Glue Table called `machine_learning_curated`:
     - Include only data from customers who agreed to share their data for research purposes.
+
+
+## Data Validation
+
+As part of the project, it is essential to validate the data at each stage to ensure the accuracy and completeness of the processed datasets. After completing each stage of the project, check the row count in the produced tables to confirm that they match the expected values.
+
+## Expected Row Counts
+
+### 1. **Landing Zone**
+   - **Customer**: 956 rows
+   - **Accelerometer**: 81,273 rows
+   - **Step Trainer**: 28,680 rows
+
+### 2. **Trusted Zone**
+   - **Customer**: 482 rows
+   - **Accelerometer**: 40,981 rows
+   - **Step Trainer**: 14,460 rows
+
+### 3. **Curated Zone**
+   - **Customer**: 482 rows
+   - **Machine Learning**: 43,681 rows
 
 
 
