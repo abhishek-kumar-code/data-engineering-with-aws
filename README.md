@@ -211,17 +211,14 @@ The **Medallion Architecture** is a key feature of a **lakehouse architecture** 
 ### Stages of Data Refinement
 
 1. **Bronze (Raw Data)**: This is the initial stage where raw, unprocessed data is ingested into the lakehouse.
-   - **Characteristics**:
      - Data may contain errors, duplicates, or inconsistencies.
      - Minimal processing or transformation has been applied.
  
 2. **Silver (Cleaned and Augmented Data)**: At this stage, the data undergoes filtering, cleaning, and augmentation to improve quality.
-   - **Characteristics**:
      - Errors and duplicates are removed.
      - Data is transformed to ensure consistency and standardization.
 
 3. **Gold (Business-Level Aggregates)**: The final stage where data is aggregated to a business level, often using structures like **star schemas** for easy reporting and analytics.
-   - **Characteristics**:
      - Includes business-level aggregates, metrics, and KPIs.
      - Ready for consumption by business analysts or reporting tools.
 
