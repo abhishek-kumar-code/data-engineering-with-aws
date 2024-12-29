@@ -311,19 +311,19 @@ A data quality issue exists where **Customer Records** in the **Landing Zone** c
 
 As part of the project, it is essential to validate the data at each stage to ensure the accuracy and completeness of the processed datasets. After completing each stage of the project, check the row count in the produced tables to confirm that they match the expected values.
 
-## Expected Row Counts
+### Expected Row Counts
 
-### 1. **Landing Zone**
+#### 1. **Landing Zone**
    - **Customer**: 956 rows
    - **Accelerometer**: 81,273 rows
    - **Step Trainer**: 28,680 rows
 
-### 2. **Trusted Zone**
+#### 2. **Trusted Zone**
    - **Customer**: 482 rows
    - **Accelerometer**: 40,981 rows
    - **Step Trainer**: 14,460 rows
 
-### 3. **Curated Zone**
+#### 3. **Curated Zone**
    - **Customer**: 482 rows
    - **Machine Learning**: 43,681 rows
 
@@ -332,10 +332,14 @@ As part of the project, it is essential to validate the data at each stage to en
 ### Landing Zone
 Glue Table DDL scripts:
 
-[customer_landing.sql](spark-and-data-lakes/scripts/SQL%20DDL/customer_landing.sql)
+- [customer_landing.sql](spark-and-data-lakes/scripts/SQL%20DDL/customer_landing.sql)
 ![Image Alt Text](spark-and-data-lakes/images/Landing%20Zone/customer_landing.PNG)
-accelerometer_landing.sql
-img2
+
+- [accelerometer_landing.sql](spark-and-data-lakes/scripts/SQL%20DDL/accelerometer_landing.sql)
+![Image Alt Text](spark-and-data-lakes/images/Landing%20Zone/accelerometer_landing.PNG)
+
+- [step_trainer_landing.sql](spark-and-data-lakes/scripts/SQL%20DDL/step_trainer_landing.sql)
+![Image Alt Text](spark-and-data-lakes/images/Landing%20Zone/step_trainer_landing.PNG)
 
 _AWS Athena images showing the customer landing data and accelerometer landing data_
 
