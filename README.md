@@ -333,12 +333,16 @@ As part of the project, it is essential to validate the data at each stage to en
 Glue Table DDL scripts:
 
 - [customer_landing.sql](spark-and-data-lakes/scripts/SQL%20DDL/customer_landing.sql)
+- [accelerometer_landing.sql](spark-and-data-lakes/scripts/SQL%20DDL/accelerometer_landing.sql)
+- [step_trainer_landing.sql](spark-and-data-lakes/scripts/SQL%20DDL/step_trainer_landing.sql)
+
+- `customer_landing` table output
 ![Image Alt Text](spark-and-data-lakes/images/Landing%20Zone/customer_landing.PNG)
 
-- [accelerometer_landing.sql](spark-and-data-lakes/scripts/SQL%20DDL/accelerometer_landing.sql)
+- `accelerometer_landing` table output
 ![Image Alt Text](spark-and-data-lakes/images/Landing%20Zone/accelerometer_landing.PNG)
 
-- [step_trainer_landing.sql](spark-and-data-lakes/scripts/SQL%20DDL/step_trainer_landing.sql)
+- `step_trainer_landing` table output
 ![Image Alt Text](spark-and-data-lakes/images/Landing%20Zone/step_trainer_landing.PNG)
 
 _AWS Athena images showing the customer landing data and accelerometer landing data_
