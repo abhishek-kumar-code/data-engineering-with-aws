@@ -333,7 +333,7 @@ As part of the project, it is essential to validate the data at each stage to en
 Glue Table DDL scripts:
 
 customer_landing.sql
-![Image Alt Text](spark-and-data-lakes/images/Landing Zone/relationship_entities.png)
+![Image Alt Text](spark-and-data-lakes/images/Landing Zone/customer_landing.PNG)
 accelerometer_landing.sql
 img2
 
