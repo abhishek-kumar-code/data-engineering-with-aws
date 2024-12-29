@@ -372,7 +372,7 @@ Spark Job Scripts:
 - [machine_learning_curated.py](spark-and-data-lakes/scripts/Spark%20Jobs/machine_learning_curated.py)
 
 **`customer_curated`** table output
-![Image Alt Text](spark-and-data-lakes/images/Curated%20Zone/customer_curated.PNG)
+![Image Alt Text](spark-and-data-lakes/images/Trusted%20Zone/customer_curated.PNG)
 
 **`machine_learning_curated`** table output
 ![Image Alt Text](spark-and-data-lakes/images/Trusted%20Zone/machine_learning_curated.PNG) 
