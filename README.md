@@ -350,22 +350,31 @@ Note: _AWS Athena images showing the customer landing data and accelerometer lan
 ### Trusted Zone
 Spark Job Scripts:
 
-customer_landing_to_trusted.py 
-img 1
-accelerometer_landing_to_trusted_zone.py 
-img 2
-step_trainer_landing_to_trusted.py 
-img 3
+- [customer_landing_to_trusted.py](spark-and-data-lakes/scripts/Spark%20Jobs/customer_landing_to_trusted.py)
+- [accelerometer_landing_to_trusted_zone.py](spark-and-data-lakes/scripts/Spark%20Jobs/accelerometer_landing_to_trusted.py)
+- [step_trainer_trusted.py](spark-and-data-lakes/scripts/Spark%20Jobs/step_trainer_trusted.py)
 
-_AWS Athena images showing the customer trusted data, accelerometer trusted and step trainer trusted data_
+**`customer_trusted`** table output
+![Image Alt Text](spark-and-data-lakes/images/Curated%20Zone/customer_trusted.PNG)
 
-customer_trusted table:
+**`accelerometer_trusted`** table output
+![Image Alt Text](spark-and-data-lakes/images/Curated%20Zone/accelerometer_trusted.PNG)
+
+**`step_trainer_trusted`** table output
+![Image Alt Text](spark-and-data-lakes/images/Curated%20Zone/step_trainer_trusted.PNG)
+
+Note: _AWS Athena images showing the customer trusted data, accelerometer trusted and step trainer trusted data_
 
 ### Curated Zone
 Spark Job Scripts:
 
-customer_trusted_to_curated.py 
-img 1
-step_trainer_trusted_to_curated.py
-img 2
-_AWS Athena images showing the customer curated data and machine learning curated data_
+- [customer_trusted_to_curated.py](spark-and-data-lakes/scripts/Spark%20Jobs/customer_trusted_to_curated.py)
+- [machine_learning_curated.py](spark-and-data-lakes/scripts/Spark%20Jobs/machine_learning_curated.py)
+
+**`customer_curated`** table output
+![Image Alt Text](spark-and-data-lakes/images/Curated%20Zone/customer_curated.PNG)
+
+**`machine_learning_curated`** table output
+![Image Alt Text](spark-and-data-lakes/images/Trusted%20Zone/machine_learning_curated.PNG) 
+
+Note: _AWS Athena images showing the customer curated data and machine learning curated data_
