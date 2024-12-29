@@ -5,7 +5,7 @@
 | Module | Project Name |
 | --- | --- |
 | Automate Data Pipleines | [Data Pipelines with Airflow](#project-1-data-pipelines-with-airflow) | 
-| Spark and Data Lakes | [STEDI Human Balance Analytics](#project-2:-STEDI-Human-Balance-Analytics) |
+| Spark and Data Lakes | [STEDI Human Balance Analytics](#project-2:-stedi-human-balance-analytics) |
 | Cloud Data Warehouse | [Sparkify Cloud Data Warehouse in Redshift](#project-3:-Sparkify-Cloud-Data-Warehouse-in-Redshift) | 
 | Data Modeling | [NoSQL Data Modeling with Apache Cassandra](#project-4:-NoSQL-Data-Modeling-with-Apache-Cassandra) | 
 _____
