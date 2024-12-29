@@ -332,7 +332,7 @@ As part of the project, it is essential to validate the data at each stage to en
 ### Landing Zone
 Glue Table DDL scripts:
 
-customer_landing.sql
+[customer_landing.sql](spark-and-data-lakes/scripts/SQL%20DDL/customer_landing.sql)
 ![Image Alt Text](spark-and-data-lakes/images/Landing%20Zone/customer_landing.PNG)
 accelerometer_landing.sql
 img2
