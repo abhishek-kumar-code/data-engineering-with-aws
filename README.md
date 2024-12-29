@@ -262,6 +262,12 @@ step_trainer/
 
 This project involves creating and managing **AWS Glue** tables for different datasets and performing data sanitization, validation, and aggregation tasks to support data analysis and machine learning model training.
 
+#### High-Level Architecture
+
+![Image Alt Text](spark-and-data-lakes/images/workflow_flowchart.png)
+
+![Image Alt Text](spark-and-data-lakes/images/relationship_entities.png)
+
 #### Stage 1: Create Glue Tables for Landing Zones
 
 To get a feel for the data, you will create three Glue tables for the three landing zones. Query the tables using AWS Athena.
@@ -323,3 +329,35 @@ As part of the project, it is essential to validate the data at each stage to en
 
 ## Final State and Results
 
+### Landing Zone
+Glue Table DDL scripts:
+
+customer_landing.sql
+![Image Alt Text](spark-and-data-lakes/images/Landing Zone/relationship_entities.png)
+accelerometer_landing.sql
+img2
+
+_AWS Athena images showing the customer landing data and accelerometer landing data_
+
+### Trusted Zone
+Spark Job Scripts:
+
+customer_landing_to_trusted.py 
+img 1
+accelerometer_landing_to_trusted_zone.py 
+img 2
+step_trainer_landing_to_trusted.py 
+img 3
+
+_AWS Athena images showing the customer trusted data, accelerometer trusted and step trainer trusted data_
+
+customer_trusted table:
+
+### Curated Zone
+Spark Job Scripts:
+
+customer_trusted_to_curated.py 
+img 1
+step_trainer_trusted_to_curated.py
+img 2
+_AWS Athena images showing the customer curated data and machine learning curated data_
