@@ -4,10 +4,10 @@
 
 | Module | Project Name |
 | --- | --- |
-| Automate Data Pipleines | [Data Pipelines with Airflow](#project-1-data-pipelines-with-airflow)) | 
-| Spark and Data Lakes | [STEDI Human Balance Analytics](./automate-data-pipelines-with-airflow) |
-| Cloud Data Warehouse | [Sparkify Cloud Data Warehouse in Redshift](./automate-data-pipelines-with-airflow) | 
-| Data Modeling | [NoSQL Data Modeling with Apache Cassandra](./automate-data-pipelines-with-airflow) | 
+| Automate Data Pipleines | [Data Pipelines with Airflow](#project-1-data-pipelines-with-airflow) | 
+| Spark and Data Lakes | [STEDI Human Balance Analytics](#project-2:-STEDI-Human-Balance-Analytics) |
+| Cloud Data Warehouse | [Sparkify Cloud Data Warehouse in Redshift](#project-3:-Sparkify-Cloud-Data-Warehouse-in-Redshift) | 
+| Data Modeling | [NoSQL Data Modeling with Apache Cassandra](#project-4:-NoSQL-Data-Modeling-with-Apache-Cassandra) | 
 _____
 ### <ins>Program Learning Outcomes</ins>  
 
@@ -378,3 +378,7 @@ Spark Job Scripts:
 ![Image Alt Text](spark-and-data-lakes/images/Trusted%20Zone/machine_learning_curated.PNG) 
 
 Note: _AWS Athena images showing the customer curated data and machine learning curated data_
+
+# [Project 3: Sparkify Cloud Data Warehouse in Redshift](./cloud-data-warehouses)
+
+# [Project 4: NoSQL Data Modeling with Apache Cassandra](./data-modeling-with-apache-cassandra)
