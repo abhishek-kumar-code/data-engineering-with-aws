@@ -17,6 +17,8 @@ _____
 * **Work efficiently with massive datasets.**
 * **Create scalable and efficient data warehouses in Cloud.**
 * **Create user-friendly relational and NoSQL data models.**
+_____
+### <ins>Graduation Certificate</ins> 
 
 > [!NOTE]
 > ###### _School of Data Science, Udacity Inc., Mountain View, CA. "Nanodegree" is a registered trademark of Udacity. © 2011-2024 Udacity, Inc._
