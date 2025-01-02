@@ -73,7 +73,7 @@ Datasets for this project (S3 Links):
 
 #### Step 1: Create a S3 Bucket using the AWS Cloudshell
 ```bash
-aws s3 mb s3://akumar-dend/`
+aws s3 mb s3://akumar-dend/
 ```
 #### Step 2: Copy Data from Udacity's S3 Bucket to Your CloudShell Directory
 ```bash
