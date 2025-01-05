@@ -445,14 +445,14 @@ Purpose: Tells Redshift how to interpret the JSON data and extract relevant fiel
 `s3://udacity-dend/log_json_path.json`
 
 ## ETL Pipeline Instructions
-(i) Run **python create_tables.py** in terminal
+1. Run **python create_tables.py** in terminal
 ```sh
 home root$ python create_tables.py
 ```
 - **Purpose:** This script will execute the SQL queries defined in _sql_queries.py_ to drop any existing tables and create the required tables for the ETL pipeline.
 - **Tables Created:** Staging tables for raw data (staging_events, staging_songs), Fact table (songplays), and Dimension tables (users, songs, artists, time).
 
-(ii) Run **python etl.py** in terminal 
+2. Run **python etl.py** in terminal 
 ```sh
 home root$ python etl.py
 ```
