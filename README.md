@@ -266,9 +266,9 @@ This project involves creating and managing **AWS Glue** tables for different da
 
 #### High-Level Architecture
 
-![Image Alt Text](spark-and-data-lakes/images/workflow_flowchart.png)
+![Image Alt Text](spark-and-data-lakes/images/workflow_flowchart.PNG)
 
-![Image Alt Text](spark-and-data-lakes/images/relationship_entities.png)
+![Image Alt Text](spark-and-data-lakes/images/relationship_entities.PNG)
 
 #### Stage 1: Create Glue Tables for Landing Zones
 
@@ -392,7 +392,7 @@ The goal is to:
 - **Stage** the data in Redshift.
 - **Transform** the data into a set of dimensional tables that the analytics team can use to gain insights into user behavior.
 
-#### High-Level Architecture
+## High-Level Architecture
 
 ![Image Alt Text](cloud-data-warehouses/images/system_architecture.PNG) 
 _This document provides the step-by-step instructions for setting up and running the ETL pipeline and configuring necessary AWS resources to support the Redshift data warehouse._
@@ -445,7 +445,7 @@ The log_json_path.json file provides the structure for parsing the log data in R
 Purpose: Tells Redshift how to interpret the JSON data and extract relevant fields for transformation into analytics tables.
 `s3://udacity-dend/log_json_path.json`
 
-#### [A] ETL Pipeline Instructions
+## ETL Pipeline Instructions
 (i) Run python create_tables.py in terminal
 ```sh
 home root$ python create_tables.py
@@ -476,7 +476,7 @@ To Complete the ETL Process: After the tables are set up, you will run the ETL p
 
 After the data is loaded and transformed into these tables, it will be available for querying in Redshift for further analysis.
 
-#### [B] AWS Configuration Instructions
+## AWS Configuration Instructions
 
 _To set up the necessary resources on AWS for supporting the Redshift data warehouse, follow these steps:_
 
