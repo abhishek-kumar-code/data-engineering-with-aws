@@ -415,7 +415,7 @@ Example File Paths:
 `song_data/A/B/C/TRABCEI128F424C983.json`
 `song_data/A/A/B/TRAABJL12903CDCF1A.json`
 
-#### Sample JSON Structure:
+**Sample JSON Structure:**
 ```bash
 {
   "num_songs": 1, "artist_id": "ARJIE2Y1187B994AB7", "artist_latitude": null, "artist_longitude": null, "artist_location": "", "artist_name": "Line Renaud", "song_id": "SOUPIRU12A6D4FA1E1", "title": "Der Kleine Dompfaff", "duration": 152.92036, "year": 0
@@ -430,7 +430,7 @@ Example File Paths:
 `log_data/2018/11/2018-11-12-events.json`
 `log_data/2018/11/2018-11-13-events.json`
 
-Sample JSON Structure:
+**Sample JSON Structure:**
 
 ```bash
 {
@@ -446,14 +446,14 @@ Purpose: Tells Redshift how to interpret the JSON data and extract relevant fiel
 `s3://udacity-dend/log_json_path.json`
 
 ## ETL Pipeline Instructions
-(i) Run python create_tables.py in terminal
+(i) Run **python create_tables.py** in terminal
 ```sh
 home root$ python create_tables.py
 ```
 - **Purpose:** This script will execute the SQL queries defined in _sql_queries.py_ to drop any existing tables and create the required tables for the ETL pipeline.
 - **Tables Created:** Staging tables for raw data (staging_events, staging_songs), Fact table (songplays), and Dimension tables (users, songs, artists, time).
 
-(ii) Run python etl.py in terminal 
+(ii) Run **python etl.py** in terminal 
 ```sh
 home root$ python etl.py
 ```
