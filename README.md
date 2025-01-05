@@ -383,11 +383,44 @@ Note: _AWS Athena images showing the customer curated data and machine learning 
 
 # [Project 3: Sparkify Cloud Data Warehouse in Redshift](./cloud-data-warehouses)
 
-### Cloud Data Warehouses
+## Project Overview
+Sparkify is a growing music streaming startup with a large user base and song database. To scale and improve their operations, they have decided to migrate their data processing and storage to the cloud. As part of the project, they need an ETL pipeline to handle the extraction, transformation, and loading (ETL) of data stored in Amazon S3 into Amazon Redshift for analytics purposes.
+
+The goal is to:
+
+- **Extract** user activity and song metadata from S3.
+- **Stage** the data in Redshift.
+- **Transform** the data into a set of dimensional tables that the analytics team can use to gain insights into user behavior.
+
+#### High-Level Architecture
 
 ![Image Alt Text](cloud-data-warehouses/images/system_architecture.PNG) 
 _This document provides the step-by-step instructions for setting up and running the ETL pipeline and configuring necessary AWS resources to support the Redshift data warehouse._
 
+## Datasets
+There are two primary datasets you will be working with:
+
+- **Song Data**: Contains metadata about songs and their artists.
+`s3://udacity-dend/song_data`
+- **Log Data**: Contains simulated user activity logs from the Sparkify app.
+`s3://udacity-dend/log_data`
+- **Log JSON Metadata**: A JSON file specifying the structure of the log data for use in the ETL process.
+`s3://udacity-dend/log_json_path.json`
+
+Song Dataset
+The Song Dataset is a subset of the Million Song Dataset, consisting of JSON files that contain metadata for songs and their artists. The dataset is partitioned by the first three characters of each song's track ID.
+
+Example File Paths:
+
+`song_data/A/B/C/TRABCEI128F424C983.json`
+`song_data/A/A/B/TRAABJL12903CDCF1A.json`
+
+Sample JSON Structure:
+```bash
+{
+  "num_songs": 1, "artist_id": "ARJIE2Y1187B994AB7", "artist_latitude": null, "artist_longitude": null, "artist_location": "", "artist_name": "Line Renaud", "song_id": "SOUPIRU12A6D4FA1E1", "title": "Der Kleine Dompfaff", "duration": 152.92036, "year": 0
+}
+```
 #### [A] ETL Pipeline Instructions
 (i) Run python create_tables.py in terminal
 ```sh
