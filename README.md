@@ -385,6 +385,7 @@ Note: _AWS Athena images showing the customer curated data and machine learning 
 
 ### Cloud Data Warehouses
 
+![Image Alt Text](cloud-data-warehouses/images/system_architecture.PNG) 
 _This document provides the step-by-step instructions for setting up and running the ETL pipeline and configuring necessary AWS resources to support the Redshift data warehouse._
 
 #### [A] ETL Pipeline Instructions
