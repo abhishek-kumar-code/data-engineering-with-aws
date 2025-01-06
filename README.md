@@ -514,3 +514,27 @@ After the data is loaded and transformed into these tables, it will be available
 ![Image Alt Text](cloud-data-warehouses/images/staging_songs.PNG) 
 
 # [Project 4: NoSQL Data Modeling with Apache Cassandra](./data-modeling-with-apache-cassandra)
+
+## Project Overview
+Sparkify, a music streaming startup, wants to analyze the data collected from their app, specifically focusing on understanding which songs users are listening to. However, the current data stored in CSV files is not in an optimal format for querying and analysis. To solve this problem, Sparkify has tasked you with creating an Apache Cassandra database that will allow efficient querying on song play data.
+
+Your role as a data engineer is to:
+
+Design a database schema in Apache Cassandra for querying song play data.
+Implement an ETL (Extract, Transform, Load) pipeline to process data from CSV files into the Cassandra database.
+Test the database with specific queries provided by the analytics team to ensure the schema supports the necessary analysis.
+
+## Objective
+The main objective of this project is to create a data model using Apache Cassandra and set up an ETL pipeline using Python. You will need to:
+
+Model the data to create tables in Apache Cassandra that support the required queries.
+Process the data by transforming raw CSV files into a streamlined format for insertion into Cassandra.
+Test the database by running queries provided by the analytics team to validate the design and results.
+
+## Project Files
+This project consists of the following files:
+
+- event_data - This is all the data collected on songs and user activity on Sparkfy new music streaming app.
+- Project_1B_ Project_Template.ipynb - This file contains the Database and ETL code.
+- event_datafile_new.csv - This csv file denormalised from event_data file that will be used to insert data into the Apache Cassandra tables.
+- images - A screenshot of the data in the event_datafile_new.csv
