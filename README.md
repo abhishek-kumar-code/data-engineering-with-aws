@@ -444,37 +444,6 @@ The log_json_path.json file provides the structure for parsing the log data in R
 Purpose: Tells Redshift how to interpret the JSON data and extract relevant fields for transformation into analytics tables.
 `s3://udacity-dend/log_json_path.json`
 
-## ETL Pipeline Instructions
-1. Run **python create_tables.py** in terminal
-```sh
-home root$ python create_tables.py
-```
-- **Purpose:** This script will execute the SQL queries defined in _sql_queries.py_ to drop any existing tables and create the required tables for the ETL pipeline.
-- **Tables Created:** Staging tables for raw data (staging_events, staging_songs), Fact table (songplays), and Dimension tables (users, songs, artists, time).
-
-2. Run **python etl.py** in terminal 
-```sh
-home root$ python etl.py
-```
-To Complete the ETL Process: After the tables are set up, you will run the ETL process that loads data from S3 into Redshift and transforms it into a star-schema format for song play analysis.
-
-- **Purpose:**: This script will load raw data from Amazon S3 into the Redshift staging tables using the COPY command (staging_events and staging_songs). It will also transform data from the staging tables into the final star-schema Fact and Dimension tables for song play analysis.
-- **Tables Created:**- Fact Table, Dimension Tables.
-
-| Table Type | Table Name |
-| ------ | ------ |
-| Fact Table | songplays |
-| Dimension Table | users |
-| Dimension Table | songs |
-| Dimension Table | artists |
-| Dimension Table | time |
-
-**Note:** 
-- The data is stored in the S3 buckets configured in the dwh.cfg file.
-- All SQL queries are stored in sql_queries.py, and queries for verifying the data ingestion and ETL process are available in the images/ directory.
-
-After the data is loaded and transformed into these tables, it will be available for querying in Redshift for further analysis.
-
 ## AWS Configuration Instructions
 
 _To set up the necessary resources on AWS for supporting the Redshift data warehouse, follow these steps:_
@@ -508,5 +477,40 @@ _In the AWS Management Console, go to the Redshift service_
 - Configure other settings for the Redshift cluster as needed, such as the database name, port, and cluster type.
 
 After the cluster is launched, you can connect to it using the provided endpoint and credentials (username and password).
+
+## ETL Pipeline Instructions
+
+1. Run **python create_tables.py** in terminal
+```sh
+home root$ python create_tables.py
+```
+- **Purpose:** This script will execute the SQL queries defined in _sql_queries.py_ to drop any existing tables and create the required tables for the ETL pipeline.
+- **Tables Created:** Staging tables for raw data (staging_events, staging_songs), Fact table (songplays), and Dimension tables (users, songs, artists, time).
+
+2. Run **python etl.py** in terminal 
+```sh
+home root$ python etl.py
+```
+To Complete the ETL Process: After the tables are set up, you will run the ETL process that loads data from S3 into Redshift and transforms it into a star-schema format for song play analysis.
+
+- **Purpose:**: This script will load raw data from Amazon S3 into the Redshift staging tables using the COPY command (staging_events and staging_songs). It will also transform data from the staging tables into the final star-schema Fact and Dimension tables for song play analysis.
+- **Tables Created:**- Fact Table, Dimension Tables.
+
+| Table Type | Table Name |
+| ------ | ------ |
+| Fact Table | songplays |
+| Dimension Table | users |
+| Dimension Table | songs |
+| Dimension Table | artists |
+| Dimension Table | time |
+
+**Note:** 
+- The data is stored in the S3 buckets configured in the dwh.cfg file.
+- All SQL queries are stored in sql_queries.py, and queries for verifying the data ingestion and ETL process are available in the images/ directory.
+
+After the data is loaded and transformed into these tables, it will be available for querying in Redshift for further analysis.
+
+![Image Alt Text](cloud-data-warehouses/images/staging_events.PNG) 
+![Image Alt Text](cloud-data-warehouses/images/staging_songs.PNG) 
 
 # [Project 4: NoSQL Data Modeling with Apache Cassandra](./data-modeling-with-apache-cassandra)
