@@ -538,3 +538,7 @@ This project consists of the following files:
 - Project_1B_ Project_Template.ipynb - This file contains the Database and ETL code.
 - event_datafile_new.csv - This csv file denormalised from event_data file that will be used to insert data into the Apache Cassandra tables.
 - images - A screenshot of the data in the event_datafile_new.csv
+
+## How To Run
+Just run Project_1B_ Project_Template.ipynb to run validation and example queries.
+![Image Alt Text](data-modeling-with-apache-cassandra/home/images/jupyter_notebook.PNG) 
