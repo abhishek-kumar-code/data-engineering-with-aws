@@ -20,6 +20,8 @@ _____
 _____
 ### <ins>Graduation Certificate</ins> 
 
+![Create Table DAG](Certificate_Udacity_Original.jpg)
+
 > [!NOTE]
 > ###### _School of Data Science, Udacity Inc., Mountain View, CA. "Nanodegree" is a registered trademark of Udacity. © 2011-2024 Udacity, Inc._
 
